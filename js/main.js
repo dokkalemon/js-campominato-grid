@@ -42,7 +42,16 @@ playBtn.addEventListener('click', () => {
     }
             console.log(numberCells);
             console.log(cellPerSide);
+
+
+    // CREAZIONE DELLA GRID;
+    const grid = document.createElement('div');
+    grid.classList.add('grid'); 
+    gridConteiner.append(grid);
+ 
 })
+
+
 
 
 
