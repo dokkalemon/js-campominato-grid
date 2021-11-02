@@ -54,6 +54,13 @@ body {
 
 
 /* GRID */
+
+.grid-conteiner {
+    text-align: center;
+    margin: 30px;
+}
+
+
 .grid {
     height: 500px;
     width: 500px;
