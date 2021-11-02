@@ -75,6 +75,9 @@ body {
     width: calc(100% / 10);
     border: 1px solid black;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .square.clicked {

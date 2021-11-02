@@ -12,10 +12,6 @@ const selectRef = document.getElementById('difficult');
 const playBtn = document.querySelector('.btn');
 const gridConteiner = document.querySelector('.grid-conteiner');
 
-playBtn.addEventListener('click', function() {
-    console.log('click me')
-})
-
 // Difficoltà
 playBtn.addEventListener('click', () => {
 
@@ -40,15 +36,32 @@ playBtn.addEventListener('click', () => {
             numberCells = 100;
             cellPerSide = 10;
     }
-            console.log(numberCells);
-            console.log(cellPerSide);
-
 
     // CREAZIONE DELLA GRID;
     const grid = document.createElement('div');
     grid.classList.add('grid'); 
     gridConteiner.append(grid);
- 
+    
+    
+
+    for (let i = 1; i <= numberCells; i++) {
+        const square = document.createElement('div');
+        square.classList.add('square');
+        grid.append(square);
+
+        //Style delle square
+        square.style.width = `calc(100% / ${cellPerSide})`;
+        square.style.height = `calc(100% / ${cellPerSide})`;
+
+        //Aggiungiamo il numero
+        let span = document.createElement('span');
+        span.innerHTML = `${i}`;
+        square.append(span);
+
+        square.addEventListener('click', function() {
+            this.classList.add('clicked')
+        })
+    }
 })
 
 
@@ -57,18 +70,3 @@ playBtn.addEventListener('click', () => {
 
 
 
-
-
-
-
-
-
-
-
-/* FUNCTIONS */
-
-//Generiamo una square
-function createSquare() {
-    document.createElement(div);
-
-}
