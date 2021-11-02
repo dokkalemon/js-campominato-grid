@@ -7,5 +7,69 @@
 }
 
 body {
+    background-color: #7fffd4;
     font-family: sans-serif;
+}
+
+
+/* TOOLBAR */
+.toolbar {
+    height: 90px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+}
+
+.logo {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    height: 100%;
+}
+
+.logo h1 {
+    padding: 20px;
+}
+
+.selection {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.selection select {
+    padding: 0px 30px;
+    margin: 10px;
+}
+
+.selection button {
+    padding: 0 10px;
+}
+
+
+/* GRID */
+.grid {
+    height: 500px;
+    width: 500px;
+    border: 1px solid black;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square {
+    height: calc(100% / 10);
+    width: calc(100% / 10);
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.square.clicked {
+    background-color: #6495ed;
 }

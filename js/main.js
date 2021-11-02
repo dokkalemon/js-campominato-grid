@@ -5,3 +5,14 @@ con difficoltà 2 => tra 1 e 81
 con difficoltà 3 => tra 1 e 49
 Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro. 
  */
+
+
+// Referenza della difficoltà, del bottone e della griglia
+const selectRef = document.getElementById('difficult');
+const playBtn = document.querySelector('.btn');
+const grid = document.querySelector('.grid');
+
+playBtn.addEventListener('click', function() {
+    console.log('click me')
+})
+
