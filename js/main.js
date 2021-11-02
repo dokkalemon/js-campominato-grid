@@ -17,7 +17,7 @@ playBtn.addEventListener('click', function() {
 })
 
 // Difficoltà
-selectRef.addEventListener('click', () => {
+playBtn.addEventListener('click', () => {
 
     //Resettiamo il conteiner
     gridConteiner.innerHTML = '';
