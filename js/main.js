@@ -37,33 +37,42 @@ playBtn.addEventListener('click', () => {
             cellPerSide = 10;
     }
 
-    // CREAZIONE DELLA GRID;
+    // Creazione della Grid;
     const grid = document.createElement('div');
     grid.classList.add('grid'); 
     gridConteiner.append(grid);
-    
-    
 
+
+    //Generiamo le square
     for (let i = 1; i <= numberCells; i++) {
-        const square = document.createElement('div');
-        square.classList.add('square');
+        const square = createSquare(cellPerSide, i);
         grid.append(square);
-
-        //Style delle square
-        square.style.width = `calc(100% / ${cellPerSide})`;
-        square.style.height = `calc(100% / ${cellPerSide})`;
-
-        //Aggiungiamo il numero
-        let span = document.createElement('span');
-        span.innerHTML = `${i}`;
-        square.append(span);
-
-        square.addEventListener('click', function() {
-            this.classList.add('clicked')
-        })
     }
 })
 
+
+/* Generiamo il nodo square */
+function createSquare(cells, num) {
+    const squareNode = document.createElement('div');
+    squareNode.classList.add('square');
+
+    //Style delle square
+    squareNode.style.width = `calc(100% / ${cells})`;
+    squareNode.style.height = `calc(100% / ${cells})`;
+
+    // Generiamo il numero sullo square
+    let span = document.createElement('span');
+        span.innerHTML = `${num}`;
+        squareNode.append(span);
+
+
+    // Aggiungiamo la classe .clicked al click
+    squareNode.addEventListener('click', function() {
+        this.classList.add('clicked')
+    })
+
+    return squareNode;
+}
 
 
 
